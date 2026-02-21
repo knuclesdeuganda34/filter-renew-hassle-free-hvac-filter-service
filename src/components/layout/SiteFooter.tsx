@@ -1,8 +1,6 @@
 import React from "react";
 import { Mail, Phone, MapPin, Wind, Facebook, Instagram, Linkedin } from "lucide-react";
-import { COMPANY_INFO, NAV_LINKS, LEGAL_CONTENT } from "@/lib/site-content";
-import { Dialog, DialogContent, DialogTrigger, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { COMPANY_INFO, NAV_LINKS } from "@/lib/site-content";
 export function SiteFooter() {
   return (
     <footer className="bg-muted/30 border-t pt-16 pb-8">
@@ -79,46 +77,8 @@ export function SiteFooter() {
         <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.</p>
           <div className="flex gap-6">
-            <Dialog>
-              <DialogTrigger asChild>
-                <button className="hover:text-foreground transition-colors">Privacy Policy</button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-md">
-                <DialogHeader>
-                  <DialogTitle>{LEGAL_CONTENT.privacy.title}</DialogTitle>
-                </DialogHeader>
-                <ScrollArea className="max-h-[60vh] pr-4">
-                  <div className="space-y-6 py-4">
-                    {LEGAL_CONTENT.privacy.sections.map((section) => (
-                      <div key={section.heading}>
-                        <h5 className="font-bold text-foreground mb-2">{section.heading}</h5>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{section.text}</p>
-                      </div>
-                    ))}
-                  </div>
-                </ScrollArea>
-              </DialogContent>
-            </Dialog>
-            <Dialog>
-              <DialogTrigger asChild>
-                <button className="hover:text-foreground transition-colors">Terms of Service</button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-md">
-                <DialogHeader>
-                  <DialogTitle>{LEGAL_CONTENT.terms.title}</DialogTitle>
-                </DialogHeader>
-                <ScrollArea className="max-h-[60vh] pr-4">
-                  <div className="space-y-6 py-4">
-                    {LEGAL_CONTENT.terms.sections.map((section) => (
-                      <div key={section.heading}>
-                        <h5 className="font-bold text-foreground mb-2">{section.heading}</h5>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{section.text}</p>
-                      </div>
-                    ))}
-                  </div>
-                </ScrollArea>
-              </DialogContent>
-            </Dialog>
+            <a href="#" className="hover:text-foreground">Privacy Policy</a>
+            <a href="#" className="hover:text-foreground">Terms of Service</a>
           </div>
         </div>
       </div>

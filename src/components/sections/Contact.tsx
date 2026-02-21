@@ -4,7 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Send, PhoneCall, Clock } from "lucide-react";
 import { toast } from "sonner";
-import confetti from "canvas-confetti";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -23,25 +22,13 @@ export function Contact() {
     defaultValues: { name: "", phone: "", email: "", message: "" },
   });
   const onSubmit = async (values: ContactFormValues) => {
-    try {
-      // Simulate API call
-      console.log("Form values:", values);
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      confetti({
-        particleCount: 150,
-        spread: 70,
-        origin: { y: 0.6 },
-        colors: ["#0ea5e9", "#10b981", "#ffffff"]
-      });
-      toast.success("Request Sent Successfully!", {
-        description: "A Filter Renew specialist will call you within 24 hours.",
-      });
-      form.reset();
-    } catch (error) {
-      toast.error("Submission failed", {
-        description: "Please try again or call us directly."
-      });
-    }
+    // Simulate API call
+    console.log("Form values:", values);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    toast.success("Message Sent!", {
+      description: "We'll get back to you within 24 hours.",
+    });
+    form.reset();
   };
   return (
     <section id="contact" className="py-24 relative">
@@ -128,18 +115,18 @@ export function Contact() {
                       <FormItem>
                         <FormLabel>How can we help?</FormLabel>
                         <FormControl>
-                          <Textarea
-                            placeholder="Tell us about your home or business..."
-                            className="bg-secondary/50 min-h-[100px] resize-none"
-                            {...field}
+                          <Textarea 
+                            placeholder="Tell us about your home or business..." 
+                            className="bg-secondary/50 min-h-[100px] resize-none" 
+                            {...field} 
                           />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
-                  <Button
-                    type="submit"
+                  <Button 
+                    type="submit" 
                     className="w-full rounded-xl h-12 text-lg font-bold"
                     disabled={form.formState.isSubmitting}
                   >
