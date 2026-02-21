@@ -95,3 +95,39 @@ export const FAQS = [
     answer: "For the first visit, yes, to map out your units. After that, we can arrange exterior or scheduled access as needed.",
   },
 ];
+export const LEGAL_CONTENT = {
+  privacy: {
+    title: "Privacy Policy",
+    sections: [
+      {
+        heading: "Data Collection",
+        text: "We collect basic contact information (name, phone, email, address) solely for the purpose of scheduling and performing HVAC filter services. Your data is encrypted and never sold to third parties."
+      },
+      {
+        heading: "Cookie Usage",
+        text: "Our website uses essential cookies to improve performance and understand user flow. We do not use invasive tracking or advertising cookies."
+      },
+      {
+        heading: "Contact Info",
+        text: "If you have any questions regarding your data, please contact us at privacy@filter-renew.com."
+      }
+    ]
+  },
+  terms: {
+    title: "Terms of Service",
+    sections: [
+      {
+        heading: "Service Limitations",
+        text: "Filter Renew provides filter replacement and basic system safety checks. We are not a full-service HVAC repair company. Major mechanical repairs will require a licensed HVAC contractor."
+      },
+      {
+        heading: "Billing Terms",
+        text: "Customers are billed upon completion of service. We match retail pricing for filters and charge a flat installation fee as stated in the quote."
+      },
+      {
+        heading: "Cancellation Policy",
+        text: "Subscriptions can be cancelled at any time without penalty. Please provide at least 24 hours notice for scheduled appointment cancellations."
+      }
+    ]
+  }
+};

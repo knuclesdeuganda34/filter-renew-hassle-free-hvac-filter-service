@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Wind } from "lucide-react";
+import { Menu, Wind } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { NAV_LINKS, COMPANY_INFO } from "@/lib/site-content";
 export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const scrollToContact = () => {
+    setIsOpen(false);
     const el = document.getElementById("contact");
     el?.scrollIntoView({ behavior: "smooth" });
   };
@@ -51,7 +53,7 @@ export function SiteHeader() {
         </nav>
         {/* Mobile Nav */}
         <div className="md:hidden">
-          <Sheet>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="w-6 h-6" />
@@ -64,6 +66,7 @@ export function SiteHeader() {
                   <a
                     key={link.href}
                     href={link.href}
+                    onClick={() => setIsOpen(false)}
                     className="text-lg font-medium border-b pb-2"
                   >
                     {link.label}
