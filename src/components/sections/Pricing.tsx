@@ -34,13 +34,12 @@ export function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              whileHover={{ y: -8 }}
             >
-              <Card
+              <Card 
                 className={cn(
-                  "h-full relative overflow-hidden rounded-[2.5rem] border-2 transition-all duration-300",
-                  plan.highlighted
-                    ? "border-primary shadow-lg scale-105 z-10"
+                  "h-full relative overflow-hidden rounded-[2.5rem] border-2 transition-all duration-300 hover:shadow-2xl",
+                  plan.highlighted 
+                    ? "border-primary shadow-lg scale-105 z-10" 
                     : "border-border shadow-soft"
                 )}
               >
@@ -52,7 +51,7 @@ export function Pricing() {
                 <CardHeader className="p-8 pb-4">
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                   <div className="flex items-baseline gap-1 mt-4">
-                    <span className="text-3xl sm:text-4xl font-display font-bold">{plan.price}</span>
+                    <span className="text-4xl font-display font-bold">{plan.price}</span>
                     <span className="text-muted-foreground text-sm font-medium">{plan.fee}</span>
                   </div>
                   <p className="text-sm font-semibold text-primary mt-1">{plan.feeLabel}</p>
@@ -73,9 +72,9 @@ export function Pricing() {
                   </ul>
                 </CardContent>
                 <CardFooter className="p-8 pt-0">
-                  <Button
+                  <Button 
                     onClick={scrollToContact}
-                    variant={plan.highlighted ? "default" : "outline"}
+                    variant={plan.highlighted ? "default" : "outline"} 
                     className="w-full rounded-2xl h-12 text-md font-bold group"
                   >
                     {plan.cta}
@@ -86,7 +85,7 @@ export function Pricing() {
             </motion.div>
           ))}
         </div>
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -95,10 +94,10 @@ export function Pricing() {
           <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center shrink-0">
             <Zap className="w-8 h-8 text-blue-500" />
           </div>
-          <div className="flex-1">
+          <div>
             <h4 className="text-lg font-bold mb-1">Did you know?</h4>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Replacing dirty filters can reduce your HVAC unit's energy consumption by <strong>5% to 15%</strong>.
+              Replacing dirty filters can reduce your HVAC unit's energy consumption by <strong>5% to 15%</strong>. 
               Our service often pays for itself through lower utility bills and extended system life.
             </p>
           </div>

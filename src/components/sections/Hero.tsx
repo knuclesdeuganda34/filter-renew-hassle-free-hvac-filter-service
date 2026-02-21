@@ -6,6 +6,9 @@ export function Hero() {
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
+  const scrollToPricing = () => {
+    document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
       {/* Background decoration */}
@@ -30,14 +33,14 @@ export function Hero() {
             Cleaner Air, <span className="text-blue-500">Zero Effort.</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            We handle your HVAC filter replacements on a schedule that works for you. 
+            We handle your HVAC filter replacements on a schedule that works for you.
             Professional installation, high-quality filters, and smart reminders.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" onClick={scrollToContact} className="w-full sm:w-auto rounded-full text-lg h-14 px-8 shadow-lg shadow-blue-500/20">
               Get Started <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full text-lg h-14 px-8">
+            <Button size="lg" variant="outline" onClick={scrollToPricing} className="w-full sm:w-auto rounded-full text-lg h-14 px-8">
               View Pricing
             </Button>
           </div>

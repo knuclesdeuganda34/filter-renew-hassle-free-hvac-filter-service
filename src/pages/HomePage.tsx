@@ -3,6 +3,7 @@ import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { Hero } from '@/components/sections/Hero';
 import { Features } from '@/components/sections/Features';
+import { Pricing } from '@/components/sections/Pricing';
 import { VideoShowcase } from '@/components/sections/VideoShowcase';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { Contact } from '@/components/sections/Contact';
@@ -16,6 +17,7 @@ export function HomePage() {
       <main className="flex-grow">
         <Hero />
         <Features />
+        <Pricing />
         <VideoShowcase />
         <Testimonials />
         <Contact />

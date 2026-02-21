@@ -7,9 +7,46 @@ export const COMPANY_INFO = {
 };
 export const NAV_LINKS = [
   { label: "How It Works", href: "#how-it-works" },
+  { label: "Pricing", href: "#pricing" },
   { label: "Services", href: "#services" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
+];
+export const PRICING_PLANS = [
+  {
+    id: "residential",
+    name: "Residential",
+    price: "Retail Price",
+    fee: "+$10",
+    feeLabel: "per filter installation",
+    description: "Simple, transparent pricing for homeowners. We match prices from major retailers like Home Depot or Lowe's.",
+    features: [
+      "Ladder-free service",
+      "Smart scheduling reminders",
+      "High-efficiency filters",
+      "System safety check",
+      "No long-term contracts",
+    ],
+    cta: "Get Started",
+    highlighted: true,
+  },
+  {
+    id: "commercial",
+    name: "Commercial",
+    price: "Custom",
+    fee: "Quote",
+    feeLabel: "volume-based rates",
+    description: "Scalable maintenance solutions for office buildings, retail spaces, and property management portfolios.",
+    features: [
+      "Bulk filter management",
+      "Detailed maintenance reports",
+      "Priority scheduling",
+      "Dedicated account manager",
+      "Flexible billing options",
+    ],
+    cta: "Contact Sales",
+    highlighted: false,
+  },
 ];
 export const FEATURES = [
   {
