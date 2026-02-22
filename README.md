@@ -1,6 +1,6 @@
 # Cloudflare Workers Full-Stack Chat Demo
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/knuclesdeuganda34/filter-renew-hassle-free-hvac-filter-service)
 
 A production-ready full-stack application template built on Cloudflare Workers, featuring a React frontend with Shadcn UI and a Hono backend powered by Durable Objects for scalable, multi-tenant state management. Demonstrates real-time chat boards with users, indexed listings, and seamless local development/deploy.
 
@@ -128,7 +128,7 @@ Deploy to Cloudflare Workers:
 
 Your app will be live at `https://your-worker.your-subdomain.workers.dev`.
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/knuclesdeuganda34/filter-renew-hassle-free-hvac-filter-service)
 
 **Custom Domain**: Update `wrangler.jsonc` and run `wrangler deploy`.
 
